@@ -2,7 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native/components/context.dart';
 import 'package:flutter_native/components/menu.dart';
-import 'package:flutter_native/views/calc_page/index.dart';
+import 'package:flutter_native/views/dialog_page/index.dart';
+import 'package:flutter_native/views/fullstate_page/index.dart';
+import 'package:flutter_native/views/lessstate_page/index.dart';
+import 'package:flutter_native/views/query_page/index.dart';
 
 
 
@@ -80,19 +83,19 @@ class DetailWidget extends StatelessWidget {
   // 获取页面
   _getPage() {
     switch (this.pageName) {
-      case '按钮':
-        return new CalcPage(isLargeScreen);
-        break;
       case '弹窗':
-        return new CalcPage(isLargeScreen);
+        return new DialogPage(isLargeScreen);
         break;
       case '无状态组件':
-        return new CalcPage(isLargeScreen);
+        return new LessStatePage(isLargeScreen);
         break;
       case '有状态组件':
-        return new CalcPage(isLargeScreen);
+        return new FullStatePage(isLargeScreen);
         break;
-      default: return new CalcPage(isLargeScreen);
+      case '请求网络数据':
+        return new QueryPage(isLargeScreen);
+        break;
+      default: return new DialogPage(isLargeScreen);
     }
   }
 

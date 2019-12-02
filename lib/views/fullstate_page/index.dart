@@ -1,17 +1,17 @@
 
 import 'package:flutter/material.dart';
 
-class CalcPage extends StatefulWidget {
+class FullStatePage extends StatefulWidget {
 
-  CalcPage(this.isLargeScreen);
+  FullStatePage(this.isLargeScreen);
 
-  bool isLargeScreen;
+  final bool isLargeScreen;
 
   @override
-  _CalcPageState createState() => new _CalcPageState();
+  _FullStateStatePage createState() => new _FullStateStatePage();
 }
 
-class _CalcPageState extends State<CalcPage> {
+class _FullStateStatePage extends State<FullStatePage> {
 
   int num = 0;
 
@@ -41,7 +41,7 @@ class _CalcPageState extends State<CalcPage> {
             // 数值
             new Container(
               padding: EdgeInsets.symmetric(horizontal: 60, vertical: 50),
-              child: new Text(this.num.toString()),
+              child: new Text(this.num.toString(), style: new TextStyle(color: Color(0xff333333), fontSize: 30),),
             ),
 
             // 加减按钮
@@ -52,17 +52,18 @@ class _CalcPageState extends State<CalcPage> {
                 children: <Widget>[
                   new RaisedButton(
                     onPressed: () {
-                      this.addNum();
-                      print('加:::$num');
-                    },
-                    child: new Text('数值+'),
-                  ),
-                  new RaisedButton(
-                    onPressed: () {
                       this.reduceNum();
                       print('减:::$num');
                     },
                     child: new Text('数值-'),
+                  ),
+
+                  new RaisedButton(
+                    onPressed: () {
+                      this.addNum();
+                      print('加:::$num');
+                    },
+                    child: new Text('数值+'),
                   ),
                 ],
               ),

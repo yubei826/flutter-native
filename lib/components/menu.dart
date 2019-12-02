@@ -18,7 +18,7 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
 
   List<String> titleItems = <String> [
-    '按钮', '弹窗', '无状态组件', '有状态组件'
+    '弹窗', '无状态组件', '有状态组件', '请求网络数据'
   ];
 
   List<Icon> iconItems = <Icon>[

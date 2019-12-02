@@ -33,31 +33,7 @@ class Http {
       baseUrl: _config.baseUrl,
       connectTimeout: _config.connectTimeout,
       receiveTimeout: _config.receiveTimeout,
-      headers: { // 默认的情况下传递的参数,也可通过 requestHeader 参数传递
-        'clientInfo': json.encode({
-          'matrixplatform': '2', // matrixplatform 1 小星，2 孕育，im只能取2
-          'userType': 1,
-          'roleType': 2,
-          'channelType': '20',
-          'clientAppVersion': '1.9.8', // 接口版本号
-          'clientYunyuVersion': '99.99.99',
-          'clientSystem': '', // 客户端系统类型(如IOS、安卓)
-          'clientVersion': '', // 客户端系统版本(如9.0、10.0)
-          'deviceCode': '', // 客户端标志
-          'latitude': '', // 经度
-          'longitude': '', // 维度
-          'nettype': 'unknown', // 网络类型标志(如WIFI、2G、3G、4G)
-          'screenwidth': '', // 设备分辨率宽度
-          'screenheight': '' // 设备分辨率高度
-        }),
-        'platform': '1', // 平台ID,相当于老版本的apptype
-        'birthday': '', // 宝宝生日
-        'timestamp': DateTime.now().millisecondsSinceEpoch, // 时间戳(1970年以来的秒数)
-        'signature': '350F163035D51E8D400114BE70EDFBFA', // 签名
-        'protocol': 'http', // 本次请求的用户协议类型
-        'usertoken': '', // 用户token
-        'loginstring': '', // 用户token
-      }
+      headers: {}
     );
 
     _dio = new Dio(_options);

@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'routers/routers.dart';
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([
     // 竖屏
